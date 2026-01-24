@@ -1,2 +1,2 @@
 # LeetCode-Problems
-Everything related to leetcode problems wil be in this repo
+Solution of leetcode problem that i have solved myself
