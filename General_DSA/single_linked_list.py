@@ -69,7 +69,16 @@ class LinkedList:
             prev = curr
             curr = curr.next
 
+    def reverse(self):
+        prev = None
+        curr = self.head
 
+        while curr:
+            next_node= curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+        self.head = prev
 
 
 ll = LinkedList()
@@ -97,4 +106,8 @@ ll.traverse()
 ll.delete_value(50)
 print("\nafter deletion")
 
+ll.traverse()
+
+print("\nreversal")
+ll.reverse()
 ll.traverse()
