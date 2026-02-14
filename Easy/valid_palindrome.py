@@ -19,12 +19,12 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        rmv = [',', '!', ':', " "]
-   
-        for ch in rmv:
-            s = s.replace(ch, "").lower()
+        cleaned = ""
         
-        return s == s[::-1]
+        for ch in s:
+            if ch.isalnum():
+                cleaned += ch.lower()
+        
+        return cleaned == cleaned[::-1]
     
-s = "A man, a plan, a canal: Panama"
-print(Solution().isPalindrome(s))
+
